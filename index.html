@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DUCK MINH QUÂN – BLOCK PUZZLE</title>
-  <link rel="stylesheet" href="style.css?v=29">
+  <meta name="theme-color" content="#0752b7">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
   <section id="welcomePage" class="welcome-page" aria-label="Đăng nhập và chuẩn bị vào game">
@@ -31,6 +37,7 @@
         </section>
       </div>
       <p class="welcome-note">Bạn có thể vào chơi mà không cần đăng nhập.</p>
+      <button id="installAppBtn" class="install-app-btn" type="button">📲 CÀI GAME VÀO ĐIỆN THOẠI</button>
     </div>
   </section>
   <main class="game-shell" inert aria-hidden="true">
@@ -100,6 +107,7 @@
   </div>
   <audio id="backgroundMusic" src="assets/background-music.mp3" preload="none" loop></audio>
   <script src="supabase-config.js?v=1"></script>
-  <script src="game.js?v=27"></script>
+  <script src="game.js?v=28"></script>
+  <script src="pwa.js"></script>
 </body>
 </html>

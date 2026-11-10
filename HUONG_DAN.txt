@@ -21,6 +21,7 @@ Thiết lập bảng xếp hạng online Supabase:
 10. Ảnh nền 3D thế giới khối được tích hợp sẵn, hiển thị cả màn hình đăng nhập lẫn màn chơi.
 
 Khi mở game, trang đăng nhập sẽ hiện trước. Có thể đăng nhập/đăng ký ngay hoặc bấm VÀO GAME để chơi không cần tài khoản. Ảnh đại diện và ảnh trên khối chỉ chọn tại sảnh trước khi vào game.
+Trên Android, mở game bằng Chrome rồi chọn CÀI GAME hoặc menu > Cài đặt ứng dụng. Trên iPhone/iPad, mở bằng Safari > Chia sẻ > Thêm vào Màn hình chính. Ứng dụng web cài theo cách này miễn phí, không cần tải từ App Store/Google Play.
 
 Lưu ý:
 - Project URL và publishable key trong supabase-config.js là cấu hình công khai dành cho trình duyệt. Không đặt secret/service_role key trong trang web.
