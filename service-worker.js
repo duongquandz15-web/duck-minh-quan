@@ -1,4 +1,4 @@
-const CACHE_NAME='duck-minh-quan-pwa-v1';
+const CACHE_NAME='duck-minh-quan-pwa-v2';
 const APP_ROOT=new URL('./',self.location.href);
 const APP_FILES=[
   './',
