@@ -136,3 +136,6 @@ body.paused .board,body.paused .tray{opacity:.35;pointer-events:none}
 .leaderboard-setup-help ol{display:grid;gap:6px;margin:9px 0 2px;padding-left:19px;line-height:1.45}
 @media(max-width:640px){.welcome-page{padding:10px}.welcome-card{max-height:calc(100vh - 20px);padding:16px;border-width:4px;border-radius:22px}.welcome-header{gap:9px;margin-bottom:12px}.welcome-logo{width:54px;height:54px}.welcome-header p{font-size:12px}.welcome-grid{grid-template-columns:1fr;gap:10px}.welcome-account,.welcome-personalize{padding:12px}.welcome-items .lobby-powerup-items{max-height:150px}}
 @media(max-width:900px){body:before{inset:0;transform:none;animation:none}}
+.account-avatar-note{margin:8px 0;color:#557a9b;text-align:center;font-size:11px;font-weight:700}
+.leaderboard-avatar-image{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover}
+.leaderboard-player-icon .leaderboard-avatar-image{width:32px;height:32px;border:1px solid #cfe2f3}

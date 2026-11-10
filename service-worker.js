@@ -1,11 +1,11 @@
-const CACHE_NAME='duck-minh-quan-pwa-v4';
+const CACHE_NAME='duck-minh-quan-pwa-v5';
 const APP_ROOT=new URL('./',self.location.href);
 const APP_FILES=[
   './',
   './index.html',
   './manifest.webmanifest',
   './style.css?v=31',
-  './game.js?v=28',
+  './game.js?v=29',
   './pwa.js',
   './supabase-config.js?v=1',
   './assets/duck-logo.png',
@@ -13,7 +13,8 @@ const APP_FILES=[
   './assets/duck-3d-crystal-world.svg',
   './assets/dmq-app-icon-192.png',
   './assets/dmq-app-icon-512.png',
-  './assets/dmq-apple-touch-icon.png'
+  './assets/dmq-apple-touch-icon.png',
+  './assets/leaderboard-avatar.png'
 ];
 
 self.addEventListener('install',event=>{
