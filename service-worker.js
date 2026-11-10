@@ -1,10 +1,10 @@
-const CACHE_NAME='duck-minh-quan-pwa-v3';
+const CACHE_NAME='duck-minh-quan-pwa-v4';
 const APP_ROOT=new URL('./',self.location.href);
 const APP_FILES=[
   './',
   './index.html',
   './manifest.webmanifest',
-  './style.css?v=30',
+  './style.css?v=31',
   './game.js?v=28',
   './pwa.js',
   './supabase-config.js?v=1',
