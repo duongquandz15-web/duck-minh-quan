@@ -1,4 +1,4 @@
-const CACHE_NAME='duck-minh-quan-pwa-v2';
+const CACHE_NAME='duck-minh-quan-pwa-v3';
 const APP_ROOT=new URL('./',self.location.href);
 const APP_FILES=[
   './',
@@ -11,9 +11,9 @@ const APP_FILES=[
   './assets/duck-logo.png',
   './assets/duck-welcome.png',
   './assets/duck-3d-crystal-world.svg',
-  './assets/app-icon-192.png',
-  './assets/app-icon-512.png',
-  './assets/apple-touch-icon.png'
+  './assets/dmq-app-icon-192.png',
+  './assets/dmq-app-icon-512.png',
+  './assets/dmq-apple-touch-icon.png'
 ];
 
 self.addEventListener('install',event=>{
