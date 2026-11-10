@@ -1,0 +1,31 @@
+DUCK MINH QUÂN – BLOCK PUZZLE (bản chạy thử)
+
+1. Giải nén thư mục.
+2. Mở Visual Studio Code.
+3. Chọn File > Open Folder và mở thư mục DUCK-MINH-QUAN-BLOCK-PUZZLE.
+4. Cài extension Live Server.
+5. Nhấn chuột phải vào index.html > Open with Live Server.
+
+Hoặc thử nhanh: mở trực tiếp index.html bằng Google Chrome.
+
+Thiết lập bảng xếp hạng online Supabase:
+1. Mở SQL Editor trong project Supabase của game.
+2. Chạy toàn bộ nội dung tệp supabase-setup.sql.
+3. Trong Authentication > URL Configuration, thêm địa chỉ trang game vào Site URL/Redirect URLs.
+4. Mở game qua Live Server. Chọn tab TẠO TÀI KHOẢN, nhập biệt danh, email, mật khẩu và xác nhận mật khẩu; hoặc chọn ĐĂNG NHẬP nếu đã có tài khoản.
+5. Đăng ký mới hiện được tự xác nhận và đăng nhập ngay, không cần chờ email. Nếu email đã có tài khoản, chuyển sang tab ĐĂNG NHẬP. Dùng QUÊN MẬT KHẨU? để yêu cầu liên kết đặt lại mật khẩu.
+6. Khi mở liên kết đặt lại từ email, game sẽ hiện form nhập mật khẩu mới và xác nhận. Sau khi đổi thành công, đăng nhập bằng mật khẩu mới. Nếu liên kết báo hết hạn/không hợp lệ, yêu cầu email đặt lại mới.
+7. Khi đã đăng nhập, mở Tài khoản > ĐỔI MẬT KHẨU để đổi trực tiếp mà không gửi email; game sẽ yêu cầu nhập mật khẩu mới hai lần.
+8. Mở 🏅 Thành tựu để xem tiến độ. Đặt khối, xóa hàng/cột và chơi nhiều ván để nhận xu một lần; xóa 25 hàng/cột sẽ mở miễn phí bàn Rừng Xanh. Thành tựu và phần thưởng được lưu trên thiết bị đang chơi.
+9. Nhạc nền tự phát lặp khi bấm VÀO GAME; nút ♫ trong màn chơi dùng để tắt/bật lại. Nếu trình duyệt chặn tự phát, nhấn ♫ để bật.
+10. Ảnh nền 3D thế giới khối được tích hợp sẵn, hiển thị cả màn hình đăng nhập lẫn màn chơi.
+
+Khi mở game, trang đăng nhập sẽ hiện trước. Có thể đăng nhập/đăng ký ngay hoặc bấm VÀO GAME để chơi không cần tài khoản. Ảnh đại diện và ảnh trên khối chỉ chọn tại sảnh trước khi vào game.
+
+Lưu ý:
+- Project URL và publishable key trong supabase-config.js là cấu hình công khai dành cho trình duyệt. Không đặt secret/service_role key trong trang web.
+- Email tài khoản không hiển thị công khai; chỉ biệt danh và điểm được đưa lên bảng.
+- Điểm cá nhân và ván đang chơi vẫn lưu trên trình duyệt. Bảng Top 100 lưu chung trên Supabase.
+- Top 100 chấp nhận điểm do trình duyệt gửi; bản game client-side chưa có cơ chế chống gian lận nâng cao.
+- Đăng nhập và bảng online cần có mạng và cấu hình SQL ở trên. Xác nhận email hiện được tắt để người chơi vào tài khoản ngay; email chưa được xác minh. Nếu Supabase báo giới hạn đăng ký, đợi hết thời gian đếm ngược rồi thử lại, không bấm liên tục.
+- Nhạc nền lấy từ tệp được người dùng cung cấp; chỉ phát sau khi bấm nút nhạc.

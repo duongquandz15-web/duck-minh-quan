@@ -235,9 +235,7 @@ document.getElementById('enterGameBtn').onclick=()=>{document.getElementById('we
 function loadImage(input,cb){input.addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const reader=new FileReader();reader.onload=()=>cb(reader.result);reader.readAsDataURL(f);});}
 function applyAvatarImage(src){const card=document.querySelector('.duck-card');card.style.backgroundImage=`url(${src})`;card.style.backgroundSize='cover';card.style.backgroundPosition='center';card.classList.add('has-photo');document.getElementById('welcomeAvatarPreview').src=src;}
 function applyBlockImage(src){blockImage=src;renderBoard();}
-loadImage(document.getElementById('photoInput'),applyAvatarImage);
 loadImage(document.getElementById('welcomePhotoInput'),applyAvatarImage);
-loadImage(document.getElementById('blockPhotoInput'),applyBlockImage);
 loadImage(document.getElementById('welcomeBlockPhotoInput'),applyBlockImage);
 window.addEventListener('pagehide',saveGame);
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')saveGame();});
