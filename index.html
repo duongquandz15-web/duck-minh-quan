@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUCK MINH QUÂN – BLOCK PUZZLE</title>
+  <link rel="stylesheet" href="style.css?v=27">
+</head>
+<body>
+  <section id="welcomePage" class="welcome-page" aria-label="Đăng nhập và chuẩn bị vào game">
+    <div class="welcome-card">
+      <header class="welcome-header">
+        <img src="assets/duck-logo.png" alt="" class="welcome-logo">
+        <div><h1>DUCK MINH QUÂN</h1><p>Đăng nhập để lưu thành tích, hoặc vào chơi ngay.</p></div>
+      </header>
+      <div class="welcome-grid">
+        <section class="welcome-account">
+          <h2>👤 Tài khoản</h2>
+          <div id="welcomeAccountDashboard" class="account-dashboard"></div>
+          <button id="enterGameBtn" class="play-btn compact">▶ VÀO GAME</button>
+        </section>
+        <section class="welcome-personalize" aria-label="Tùy chỉnh ảnh">
+          <div class="welcome-tool-card">
+            <img id="welcomeAvatarPreview" src="assets/duck-welcome.png" alt="Ảnh đại diện hiện tại">
+            <div><b>Ảnh đại diện</b><label class="small-upload">Chọn ảnh<input type="file" id="welcomePhotoInput" accept="image/*"></label></div>
+          </div>
+          <div class="welcome-tool-card">
+            <span class="welcome-tool-icon">🧩</span>
+            <div><b>Ảnh trên khối</b><label class="small-upload">Chọn ảnh<input type="file" id="welcomeBlockPhotoInput" accept="image/*"></label></div>
+          </div>
+        </section>
+      </div>
+      <p class="welcome-note">Bạn có thể vào chơi mà không cần đăng nhập.</p>
+    </div>
+  </section>
+  <main class="game-shell" inert aria-hidden="true">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-spark">✦</div>
+        <div class="brand-title"><span>DUCK</span><strong>MINH QUÂN</strong><small>BLOCK PUZZLE</small></div>
+        <img class="mascot" src="assets/duck-logo.png" alt="Logo ngỗng DUCK MINH QUÂN">
+      </div>
+      <div class="stats">
+        <div class="stat"><span>🏆</span><div><small>ĐIỂM SỐ</small><b id="score">0</b></div></div>
+        <div class="stat"><span>👑</span><div><small>KỶ LỤC</small><b id="best">0</b></div></div>
+        <div class="stat"><span>🪙</span><div><small>ĐỒNG XU</small><b id="coins">0</b></div></div>
+      </div>
+      <div class="quick-controls">
+        <button id="soundBtn" class="round-btn" title="Bật/tắt âm thanh">🔊</button>
+        <button id="musicBtn" class="round-btn" title="Bật/tắt nhạc">♫</button>
+        <button id="settingsBtn" class="round-btn" title="Cài đặt">⚙</button>
+      </div>
+    </header>
+
+    <section class="layout">
+      <aside class="left-panel">
+        <div class="duck-card">
+          <img class="duck-face" src="assets/duck-welcome.png" alt="Vịt đeo kính đang tạo dáng">
+          <p>Chào mừng đến với<br><b>DUCK MINH QUÂN!</b></p>
+        </div>
+        <label class="upload-btn">🖼️ Chọn ảnh của bạn
+          <input type="file" id="photoInput" accept="image/*">
+        </label>
+        <div class="mini-actions">
+          <button id="helpBtn">❔ Hướng dẫn</button>
+          <button id="statsBtn">▥ Thống kê</button>
+        </div>
+      </aside>
+
+      <section class="center-panel">
+        <div class="board-heading"><span>🧩 BÀN GHÉP KHỐI</span><span class="sub">8 × 8</span></div>
+        <div id="board" class="board" aria-label="Bàn chơi 8 nhân 8"></div>
+        <button id="cancelHammerBtn" class="secondary-btn hammer-cancel hidden">❌ HỦY DÙNG BÚA</button>
+        <div class="tray-wrap">
+          <div class="tray-title">CÁC KHỐI – Kéo khối vào bàn</div>
+          <div id="tray" class="tray"></div>
+        </div>
+        <div class="main-actions">
+          <button id="newGameBtn" class="play-btn">▶ CHƠI MỚI</button>
+          <button id="saveExitBtn" class="secondary-btn">💾 LƯU & THOÁT</button>
+        </div>
+        <div id="saveStatus" class="save-status hidden" role="status"></div>
+        <section id="lobbyPowerups" class="lobby-powerups" aria-label="Vật phẩm trợ giúp">
+          <div class="lobby-powerups-heading"><span>⚡</span><b>VẬT PHẨM CỦA BẠN</b><small>Chọn để dùng ngay</small></div>
+          <div id="lobbyPowerupItems" class="lobby-powerup-items"></div>
+        </section>
+      </section>
+
+      <aside class="right-panel">
+        <div class="feature-card">
+          <div class="feature-icon">🧩</div><b>Ảnh trên khối</b>
+          <label class="small-upload">Chọn ảnh<input type="file" id="blockPhotoInput" accept="image/*"></label>
+        </div>
+        <button id="dailyBtn" class="gold-btn">🎁 Quà hằng ngày</button>
+        <button id="shopBtn" class="gold-btn">🛍️ Cửa hàng xu</button>
+        <button id="achievementsBtn" class="gold-btn">🏅 Thành tựu</button>
+        <button id="accountBtn" class="gold-btn">👤 Đăng nhập</button>
+        <button id="rankBtn" class="gold-btn">🏆 Bảng xếp hạng</button>
+        <button id="exitBtn" class="secondary-btn">↩ Thoát</button>
+      </aside>
+    </section>
+    <footer>DUCK MINH QUÂN – BLOCK PUZZLE <span>•</span> Chơi vui mỗi ngày!</footer>
+  </main>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-card"><button class="close" id="closeModal">✕</button><h2 id="modalTitle">Hướng dẫn</h2><p id="modalText"></p><div id="statsDashboard" class="stats-dashboard hidden"></div><div id="dailyDashboard" class="daily-dashboard hidden"></div><div id="leaderboardDashboard" class="leaderboard-dashboard hidden"></div><div id="accountDashboard" class="account-dashboard hidden"></div><div id="shopDashboard" class="shop-dashboard hidden"></div><div id="achievementsDashboard" class="achievements-dashboard hidden"></div><div id="settingsControls" class="modal-controls hidden"><button id="modalSoundToggle" class="secondary-btn"></button><button id="modalMusicToggle" class="secondary-btn"></button><label class="music-volume-control" for="musicVolumeSlider"><span><b>Âm lượng nhạc nền</b><output id="musicVolumeValue" for="musicVolumeSlider">24%</output></span><input id="musicVolumeSlider" type="range" min="0" max="100" step="1" value="24" aria-label="Âm lượng nhạc nền"><span class="music-volume-scale"><small>Tắt</small><small>100%</small></span></label></div><button id="dailyClaimBtn" class="play-btn compact hidden">NHẬN QUÀ</button><button class="play-btn compact" id="modalOk">ĐÃ HIỂU</button></div>
+  </div>
+  <audio id="backgroundMusic" src="assets/background-music.mp3" preload="none" loop></audio>
+  <script src="supabase-config.js?v=1"></script>
+  <script src="game.js?v=25"></script>
+</body>
+</html>
